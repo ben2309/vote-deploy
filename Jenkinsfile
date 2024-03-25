@@ -14,7 +14,7 @@ node {
                         sh "git config user.email benoit.barbierato@email.com"
                         sh "git config user.name ben2309"
                         sh "cat vote-ui-deployment.yaml"
-                        sh "sed -i 's+dockerHubUserName/vote.*+semerbba/vote:${DOCKERTAG}+g' vote-ui-deployment.yaml"
+                        sh "sed -i 's+semerbba/vote.*+semerbba/vote:${DOCKERTAG}+g' vote-ui-deployment.yaml"
                         sh "cat vote-ui-deployment.yaml"
                         sh "git add ."
                         sh "git commit -m 'Done by Jenkins Job deployment: ${env.BUILD_NUMBER}'"
