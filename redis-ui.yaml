@@ -14,7 +14,7 @@ spec:
         app: redis-ui
     spec:
       containers:
-      - image: docker.io/redis:alpines
+      - image: redis:alpine
         name: redis-ui
         ports:
         - containerPort: 6379
